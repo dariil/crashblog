@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <div class="main-parent-flex-container">
+        {% for post in posts %}
+            <div class="child-content">
+                <h2 class="date-style">{{ post.created_at|timesince }} ago</h2>
+                <h1 class="blogs-title">{{ post.title }}</h1>
+                <p class="blogs-intro">{{ post.intro }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
