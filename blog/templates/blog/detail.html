@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ post.title }} | {% endblock %}
+
+{% block content %}
+<h1>{{ post.title }}</h1>
+<div class="main-parent-flex-container">
+
+        <div class="child-content">
+            <!-- <h2 class="date-style">{{ post.created_at|timesince }} ago</h2> -->
+
+                <h2 class="date-style">{{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }}</h2>
+                <h1 class="blogs-title">{{ post.title }}</h1>
+                <p class="blogs-intro"><strong>{{ post.intro }}</strong></p>
+                <p>{{ post.body }}</p>
+                <p><small>Blog Category: {{ post.category }}</small></p>
+
+                <hr>
+                <h2 class="">Comments</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                    <div class="">
+                        <div>
+                            <button>Submit comment</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                {% for comment in post.comments.all %}
+                    <article class="">
+                        <div class="">
+                            <strong>{{ comment.name }}</strong> <small>{{ comment.created_at|date:'g:i A'}}</small><br>
+                            {{ comment.body }}
+                        </div>
+                    </article>
+                {% endfor %}
+        </div>
+</div>
+{% endblock %}  

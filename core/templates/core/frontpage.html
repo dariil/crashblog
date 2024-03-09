@@ -2,13 +2,16 @@
 {% load static %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'styles.css' %}"> -->
     <div class="main-parent-flex-container">
         {% for post in posts %}
             <div class="child-content">
-                <h2 class="date-style">{{ post.created_at|timesince }} ago</h2>
-                <h1 class="blogs-title">{{ post.title }}</h1>
-                <p class="blogs-intro">{{ post.intro }}</p>
+                <!-- <h2 class="date-style">{{ post.created_at|timesince }} ago</h2> -->
+                <a href="{% url 'post_detail' post.slug %}">
+                    <h2 class="date-style">{{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }}</h2>
+                    <h1 class="blogs-title">{{ post.title }}</h1>
+                    <p class="blogs-intro">{{ post.intro }}</p>
+                </a>
             </div>
         {% endfor %}
     </div>
