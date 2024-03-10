@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <title>{% block title %}Home | {% endblock %}  Crash Blog</title>
 </head>
 <body>
     <div class="navbar-container">
         <nav id="navbar">
-            
-            <h2 class="logo">
-                <span class="logo-text-style">T</span>he <span class="logo-text-style">F</span>ront <span class="logo-text-style">P</span>age.
-            </h2>
+            <img src="../../static/assets/alltopia_logo_nobg.png" class="logo" alt="AllTopia Logo"/>
+            <!-- <h2 class="logo">
+                AllTopia
+            </h2> -->
+            <div class="search-container">
+                <span class="icon is-left">
+                    <i class="fa fa-search" style="color: #CB3737;"></i>
+                </span>
+                <input class="search-menu" type="text" placeholder="Search">
+            </div>
             <ul>
                 <li class="nav-texts"><a class="nav-option" href="#welcome-section"> <span class="text-hover-effect"><b>About</b></span></a></li>
                 <li class="nav-texts"><a class="nav-option" href="#projects"> <b>Home</b> </a></li>
                 <li>
-                    <div class="search-container">
-                        <span class="icon is-left">
-                            <i class="fa fa-search" style="color: #4E6C50;"></i>
-                        </span>
-                        <input class="search-menu" type="text" placeholder="Search">
-                    </div>
                 </li>
             </ul>
         </nav>
@@ -37,7 +37,7 @@
     <footer>
         <div class="footer-main-container">
             <div class="footer-contents">
-                <p>Copyright (c) 2023 - The Front Page.</p>
+                <p>Copyright (c) 2024 - AllTopia.</p>
             </div>
         </div>
     </footer>

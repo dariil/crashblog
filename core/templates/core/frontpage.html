@@ -2,7 +2,63 @@
 {% load static %}
 
 {% block content %}
-    <!-- <link rel="stylesheet" href="{% static 'styles.css' %}"> -->
+    <div class="header-title">
+        <h2>Welcome to AllTopia!</h2>
+    </div>
+    <div class="blog-categories">
+        <div class="blog-category cat-active">
+            <p>View All</p>
+        </div>
+        <div class="blog-category">
+            <p>Technology</p>
+        </div>
+        <div class="blog-category">
+            <p>Lifestyle</p>
+        </div>
+        <div class="blog-category">
+            <p>Travel</p>
+        </div>
+        <div class="blog-category">
+            <p>Movies</p>
+        </div>
+        <div class="blog-category">
+            <p>Music</p>
+        </div>
+    </div>
+    <hr>
+    <p class="latest-post-tag">Latest Post</p>
+    <div class="latest-post-container">
+        <div class="latest-large">
+            <div class="latest-l-img"></div>
+            <div>
+                <h3 class="latest-blog-l-title">Lorem Ipsum dolor amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="post-info-row">
+                <div class="date-posted">
+                    <p><strong>Mar 19, 2022</strong> at 10:25 PM</p>
+                </div>
+                <div class="post-category-tag">
+                    <p>Lifestyle</p>
+                </div>
+            </div>
+        </div>
+        <div class="latest-small">
+            <div class="latest-s-img"></div>
+            <div>
+                <h3 class="latest-blog-l-title">Lorem Ipsum dolor amet.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="post-info-row">
+                <div class="date-posted">
+                    <p><strong>Mar 19, 2022</strong> at 10:25 PM</p>
+                </div>
+                <div class="post-category-tag">
+                    <p>Travel</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="main-parent-flex-container">
         {% for post in posts %}
             <div class="child-content">
