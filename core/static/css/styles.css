@@ -125,7 +125,8 @@ li a:hover{
 
 .header-title h2{
     font-size: 3.0rem;
-    font-weight: 200;
+    color: var(--page-theme-color-darker);
+    font-weight: 600;
 }
 
 .blog-categories{
@@ -216,7 +217,7 @@ li a:hover{
     background-position: center; 
     width: 100%;
     height: 300px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .latest-s-img{
@@ -225,7 +226,7 @@ li a:hover{
     background-position: center; 
     width: 100%;
     height: 300px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .latest-small h3{
@@ -318,6 +319,41 @@ li a:hover{
     white-space:normal;
 }
 
+.view-post-category-tag{
+    display: flex;
+    justify-content: center;
+
+    align-self: flex-end;
+    width: 8%;
+    font-weight: 700;
+    padding: 5px 10px 5px 10px;
+    /* background-color: var(--page-theme-color-darker);
+    color: var(--light-text-color); */
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    margin-right: 10px;;
+}
+
+.post-view-main-container{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto auto auto;
+    width: 75%;
+    padding: 10px;
+    /* background-color: beige; */
+}
+
+.post-img{
+    background-image: url('../assets/blog-image-test-large.jpg');
+    background-size:cover;
+    background-position: center; 
+    width: auto;
+    height: 55vh;
+    border-radius: 10px;
+}
+
 .about-parent-flex-container{
     display: flex;
 }
@@ -328,12 +364,8 @@ li a:hover{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 25vh;
+    height: 15vh;
     background-color: var(--page-theme-color);
-}
-
-.footer-contents{
-
 }
 
 .footer-contents p{

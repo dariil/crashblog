@@ -3,13 +3,16 @@
 {% block title %}{{ post.title }} | {% endblock %}
 
 {% block content %}
-<h1>{{ post.title }}</h1>
-<div class="main-parent-flex-container">
-
-        <div class="child-content">
+<!-- <h1>{{ post.title }}</h1> -->
+<div class="post-view-main-container">
+    <div class="view-post-category-tag">
+        <p>Travel</p>
+    </div>
+    <div class="post-img"></div>
+        <!-- <div class="child-content"> -->
+            
             <!-- <h2 class="date-style">{{ post.created_at|timesince }} ago</h2> -->
-
-                <h2 class="date-style">{{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }}</h2>
+                <!-- <h2 class="date-style">{{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }}</h2>
                 <h1 class="blogs-title">{{ post.title }}</h1>
                 <p class="blogs-intro"><strong>{{ post.intro }}</strong></p>
                 <p>{{ post.body }}</p>
@@ -36,7 +39,7 @@
                             {{ comment.body }}
                         </div>
                     </article>
-                {% endfor %}
-        </div>
+                {% endfor %} -->
+        <!-- </div> -->
 </div>
 {% endblock %}  
