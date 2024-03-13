@@ -6,9 +6,16 @@
 <!-- <h1>{{ post.title }}</h1> -->
 <div class="post-view-main-container">
     <div class="view-post-category-tag">
-        <p>Travel</p>
+        <p class=""><strong>Posted on </strong><u><span class="post-view-date">{{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }}</span></u></p>
+        <p class="post-category-tag"><strong>Travel</strong></p>
     </div>
     <div class="post-img"></div>
+    <div class="post-view-content-container">
+        <h2 class="">{{ post.title }}</h2>
+        <p class="post-view-intro">{{ post.intro }} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <hr>
+        <p class="post-view-content">{{ post.body }}</p>
+    </div>
         <!-- <div class="child-content"> -->
             
             <!-- <h2 class="date-style">{{ post.created_at|timesince }} ago</h2> -->
