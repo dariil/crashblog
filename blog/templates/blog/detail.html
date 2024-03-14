@@ -15,6 +15,25 @@
         <p class="post-view-intro">{{ post.intro }} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <hr>
         <p class="post-view-content">{{ post.body }}</p>
+        <hr>
+    </div>
+    <div class="comment-section-container">
+        <div class="comment-section-header">
+            <p class="comment-header">Join the conversation!</p>
+            <p class="comment-sub-header">Become part of the discussion by entering your name, email, and your comment below.</p>
+            <div class="comsec-fields-container">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+    
+                    <div class="">
+                        <div>
+                            <button>Submit comment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
         <!-- <div class="child-content"> -->
             
