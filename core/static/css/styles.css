@@ -387,19 +387,68 @@ li a:hover{
 }
 
 .comment-header{
-    margin: 10px 10px 0 10px;
-    font-size: 1.7rem;
+    margin: 20px 20px 0 20px;
+    font-size: 2.0rem;
     font-weight: 900;
+    color: var(--page-theme-color)
 }
 
 .comment-sub-header{
-    margin: 0 10px 0 10px;
+    margin: 0 20px 0 20px;
     font-size: 1.2rem;
     font-weight: 300;
 }
 
 .comsec-fields-container{
-    
+    display: flex;
+}
+
+.comment-form{
+    width: 100%;
+    margin: 20px;
+}
+
+.field-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.field-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.field-group input[type="text"],
+.field-group input[type="email"],
+.field-group textarea {
+    width: 45%;
+    padding: 10px;
+    border: 2px solid #e9e9e9;
+    border-radius: 10px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.field-group textarea {
+    height: 120px; /* Adjust as needed */
+    width: 55%;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.submit-btn {
+    color: var(--light-text-color); /* Text color */
+    border: 2px solid transparent; /* Remove border */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--page-theme-color); /* Remove background color */
+    cursor: pointer;
+    font-size: 1.0rem;
+}
+
+
+.submit-btn:hover {
+    background-color: var(--page-theme-color-darker);
+    color: var(--light-text-color);
 }
 
 .about-parent-flex-container{

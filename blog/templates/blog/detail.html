@@ -22,15 +22,21 @@
             <p class="comment-header">Join the conversation!</p>
             <p class="comment-sub-header">Become part of the discussion by entering your name, email, and your comment below.</p>
             <div class="comsec-fields-container">
-                <form method="POST">
+                <form method="POST" class="comment-form">
                     {% csrf_token %}
-                    {{ form.as_p }}
-    
-                    <div class="">
-                        <div>
-                            <button>Submit comment</button>
-                        </div>
+                    <div class="field-group">
+                        <label for="id_name">Name</label>
+                        {{ form.name }}
                     </div>
+                    <div class="field-group">
+                        <label for="id_email">Email</label>
+                        {{ form.email }}
+                    </div>
+                    <div class="field-group">
+                        <label for="id_body">Comment</label>
+                        {{ form.body }}
+                    </div>
+                    <button class="submit-btn">Submit comment</button>
                 </form>
             </div>
         </div>
