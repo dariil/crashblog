@@ -18,6 +18,7 @@
         <hr>
     </div>
     <div class="comment-section-container">
+        <div class="comment-section-header">
             <div class="comsec-fields-container">
                     <form method="POST" class="comment-form">
                         <p class="comment-header">Join the conversation!</p>
@@ -43,6 +44,18 @@
                     <img src="../../static/assets/conversation.png" />
                 </div>
             </div>
+        </div>
+        <div class="comments-main-container">
+            {% for comment in post.comments.all %}
+                <div class="comment-container">
+                    <img src="../../static/assets/default-client-profile.png" class="default-account-image"/>
+                        <div class="">
+                            <strong>{{ comment.name }}</strong> <small>{{ comment.created_at|date:'g:i A'}}</small><br>
+                            {{ comment.body }}
+                        </div>
+                </div>
+                {% endfor %}
+        </div>
     </div>
         <!-- <div class="child-content"> -->
             
