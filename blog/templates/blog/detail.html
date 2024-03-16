@@ -18,28 +18,31 @@
         <hr>
     </div>
     <div class="comment-section-container">
-        <div class="comment-section-header">
-            <p class="comment-header">Join the conversation!</p>
-            <p class="comment-sub-header">Become part of the discussion by entering your name, email, and your comment below.</p>
             <div class="comsec-fields-container">
-                <form method="POST" class="comment-form">
-                    {% csrf_token %}
-                    <div class="field-group">
-                        <label for="id_name">Name</label>
-                        {{ form.name }}
-                    </div>
-                    <div class="field-group">
-                        <label for="id_email">Email</label>
-                        {{ form.email }}
-                    </div>
-                    <div class="field-group">
-                        <label for="id_body">Comment</label>
-                        {{ form.body }}
-                    </div>
-                    <button class="submit-btn">Submit comment</button>
-                </form>
+                    <form method="POST" class="comment-form">
+                        <p class="comment-header">Join the conversation!</p>
+                        <p class="comment-sub-header">Become part of the discussion by entering your name, email, and your comment below.</p>
+                        <hr>
+                        <br>
+                        {% csrf_token %}
+                        <div class="field-group">
+                            <label for="id_name">Name</label>
+                            {{ form.name }}
+                        </div>
+                        <div class="field-group">
+                            <label for="id_email">Email</label>
+                            {{ form.email }}
+                        </div>
+                        <div class="field-group">
+                            <label for="id_body">Comment</label>
+                            {{ form.body }}
+                        </div>
+                        <button class="submit-btn">Submit comment</button>
+                    </form>
+                <div class="comsec-art">
+                    <img src="../../static/assets/conversation.png" />
+                </div>
             </div>
-        </div>
     </div>
         <!-- <div class="child-content"> -->
             
