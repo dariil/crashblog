@@ -466,8 +466,7 @@ li a:hover{
 .comment-container{
     display: flex;
     width: 85%;
-    align-items: center;
-    align-self: center;
+    align-items: start;
     margin: 10px auto 20px auto
 }
 
