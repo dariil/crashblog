@@ -1,6 +1,8 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
+{% block title %}{{ category.title }} | {% endblock %}
+
 {% block content %}
     <div class="header-title">
         <h2>Welcome to AllTopia!</h2>
@@ -60,7 +62,7 @@
         </div>
     </div>
     <div class="main-parent-flex-container">
-        {% for post in posts %}
+        {% for post in category.posts.all %}
             <div class="child-content">
                 <!-- <h2 class="date-style">{{ post.created_at|timesince }} ago</h2> -->
                 <a href="{% url 'post_detail' post.category.slug post.slug %}">
