@@ -20,7 +20,9 @@
                 <span class="icon is-left">
                     <i class="fa fa-search" style="color: #CB3737;"></i>
                 </span>
-                <input class="search-menu" type="text" placeholder="Search">
+                <form method="get" action="{% url 'search' %}" class="search-form">
+                    <input class="search-menu" name="query" type="text" placeholder="Search">
+                </form>
             </div>
             <ul>
                 <li class="nav-texts"><a class="nav-option" href="{% url 'about' %}"> <span class="text-hover-effect"><b>About</b></span></a></li>
