@@ -9,7 +9,10 @@
         <p class=""><strong>Posted on </strong><u><span class="post-view-date">{{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }}</span></u></p>
         <p class="tag"><a href="{% url 'category_detail' post.category.slug %}" class="post-category-tag">{{post.category}} <!--<strong>Travel</strong>--></a></p>
     </div>
-    <div class="post-img"></div>
+    <!-- <div class="post-img"></div> -->
+    {% if post.image %}
+        <div class="post-img" style="background-image: url('{{ post.image.url }}');"></div>
+    {% endif %}
     <div class="post-view-content-container">
         <h2 class="">{{ post.title }}</h2>
         <p class="post-view-intro">{{ post.intro }} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

@@ -66,9 +66,16 @@
             <div class="child-content">
                 <!-- <h2 class="date-style">{{ post.created_at|timesince }} ago</h2> -->
                 <a href="{% url 'post_detail' post.category.slug post.slug %}">
-                    <h2 class="date-style">{{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }}</h2>
+                    {% if post.image %}
+                        <div class="blog-post-image" style="background-image: url('{{ post.image.url }}');"></div>
+                    {% endif %}
+                    <p class="preview-tag-p"><a href="{% url 'category_detail' post.category.slug %}" class="preview-tag">{{post.category}} </a></p>
                     <h1 class="blogs-title">{{ post.title }}</h1>
                     <p class="blogs-intro">{{ post.intro }}</p>
+                    <div class="date-posted">
+                        <!-- {{ post.created_at|date:'M d, Y' }} at {{ post.created_at|date:'g:i A' }} -->
+                        <p><strong>{{ post.created_at|date:'M d, Y' }}</strong> at {{ post.created_at|date:'g:i A' }}</p>
+                    </div>
                 </a>
             </div>
             {% empty %}
