@@ -112,6 +112,7 @@ li a:hover{
     color: var(--page-theme-color);
     transition: color 0.3s ease-in-out;
 }
+
 .header-title{
     background-image: url('../assets/blurry_background_header.png');
     background-size: cover;
@@ -261,12 +262,23 @@ li a:hover{
     border-radius: 10px;
 }
 
+.preview-tag-p{
+    margin: 0px 0 30px 0;
+}
+
+.preview-tag{
+    /* padding: 5px 10px 5px 10px; */
+    /* background-color: var(--page-theme-color-darker); */
+    color: var(--page-theme-color);
+    border-radius: 10px;
+}
+
 .main-parent-flex-container{
     margin: auto;
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 400px); /* Three equal columns */
-    row-gap: 80px; /* Gap between grid items */
+    row-gap: 30px; /* Gap between grid items */
     justify-content: space-between;
 }
 
@@ -316,7 +328,7 @@ li a:hover{
 
 .child-content{
     justify-self: center;
-    width: 80%;
+    width: 100%;
     height: 100%;
     /* background-color: #F6F1F1; */
     /* border-style: solid;
@@ -325,8 +337,7 @@ li a:hover{
     /* border-color: #4E6C50; */
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2); */
     padding: 20px;
-    margin-top: 40px;
-    margin-left: 0px;
+    /* margin-top: 40px; */
     overflow: hidden;
 }
 
@@ -339,7 +350,7 @@ li a:hover{
 }
 
 .blogs-intro{
-    margin-top: 30px;
+    margin-bottom: 15px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -533,6 +544,15 @@ li a:hover{
     width: auto;
     height: 40px;
     margin-right: 10px;
+}
+
+.blog-post-image{
+    width: 100%;
+    height: 270px;
+    background-size: cover;
+    background-position: center; 
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 
